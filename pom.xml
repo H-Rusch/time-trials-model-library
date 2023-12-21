@@ -15,6 +15,14 @@
     <artifactId>time-trials-model-library</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub H-Rusch Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/H-Rusch/time-trials-model-library</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>

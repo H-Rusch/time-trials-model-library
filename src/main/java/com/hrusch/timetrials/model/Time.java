@@ -1,6 +1,7 @@
 package com.hrusch.timetrials.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -11,14 +12,20 @@ import com.hrusch.timetrials.model.config.jackson.serialization.CustomDurationDe
 import com.hrusch.timetrials.model.config.jackson.serialization.CustomDurationSerializer;
 import java.time.Duration;
 import java.time.LocalDateTime;
-
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Document
 public class Time {
+
+    @Id
+    @JsonIgnore
+    private String id;
 
     private String username;
 
